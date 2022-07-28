@@ -38,12 +38,12 @@ IP=args.shodan
 file=args.file
 #whoismodule
 #using whois library andcreating instance
-print("[+]Using whois module to collect information about {} ".format(domain))
+print(f"[+]{green}Using whois module to collect information about {} ".format(domain))
 whoisresult=""
 #Getting the information
 winstan = whois.query(domain)
 try:
-    print("[+] Got the information and extractin....")
+    print(f"[+]{green} Got the information and extractin....")
 
     whoisresult+="[+]Name:{}".format(winstan.name) + '\n'
     whoisresult+="[+]Registrar:{}".format(winstan.registrar) + '\n'
