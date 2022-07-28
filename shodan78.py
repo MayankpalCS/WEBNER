@@ -5,7 +5,7 @@ argparse=argparse.ArgumentParser(description=sys.argv[0]+"will let you search ab
 argparse.add_argument("-s","--shodan",help="Use it look up anything on shodan")
 args=argparse.parse_args()
 shodan1=args.shodan
-api='X6AOVf7BYQ7CMP2nMqKLTTrlJcnXa4dU'
+api=input("What is your shodan api")
 api=shodan.Shodan(api)
 results=api.search(shodan1)
 print("Total results found {}".format(results['total']))
