@@ -6,6 +6,13 @@ import requests
 import sys
 import argparse
 import socket
+from colorama import init, Fore
+init()
+red = Fore.RED
+blue = Fore.BLUE
+green = Fore.GREEN
+yellow=Fore.YELLOW
+reset = Fore.RESET
 print("Created by mayank pal")
 def banner():
     print("""%s
@@ -53,7 +60,7 @@ try:
 except:
     pass
 
-print(whoisresult)
+print(f"{green}{whoisresult}")
 
 time.sleep(4)
 #Getting DNS information
@@ -112,7 +119,7 @@ try:
 except Exception as o:
     print("SPF record could not be found")
 
-print(DNSINFO)
+print(f"{green}{DNSINFO}")
 #Geolocation module
 time.sleep(4)
 GEOINFO=""
@@ -126,7 +133,7 @@ try:
     GEOINFO+="[+] City: {}".format(response['city']) + '\n'
 except:
     pass
-print(GEOINFO)
+print(f"{green}{GEOINFO}")
 if IP:
     Shodaninfo=""
     try:
@@ -140,7 +147,7 @@ if IP:
             Shodaninfo+="{}".format(result['data'])+'\n'
     except:
         pass
-    print(Shodaninfo)
+    print(f"{green}{Shodaninfo})
 if (file):
     with open(file,'w') as file:
         file.write("Whois information"+'\n'+whoisresult + '\n\n\n')
