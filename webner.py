@@ -45,7 +45,7 @@ try:
     whoisresult+="[+]Registration {}".format(winstan.registrant_country) + '\n'
     whoisresult+="[+]expiration date {}".format(winstan.expiration_date) + '\n'
     whoisresult+="[+]admin {}".format(winstan.admin) + '\n'
-    whoisresult+="[+]owner {}",format(winstan.owner) + '\n'
+    whoisresult+="[+]owner {}".format(winstan.owner) + '\n'
     whoisresult+="[+]status {}".format(winstan.status) + '\n'
     whoisresult+="[+]tld {}".format(winstan.tld) + '\n'
     whoisresult+="[+]last updated {}".format(winstan.last_updated) + '\n'
@@ -131,7 +131,7 @@ if IP:
     Shodaninfo=""
     try:
         print("Getting information using shodan")
-	      api=input("Enter your shodan api by logging into shodan")
+        api=input("What is you api")
         api=shodan.Shodan(api)
         results=api.search(IP)
         Shodaninfo+="Total results found: {}".format(results['total']) +'\n'
