@@ -147,7 +147,7 @@ if IP:
             Shodaninfo+="{}".format(result['data'])+'\n'
     except:
         pass
-    print(f"{green}{Shodaninfo})
+    print(f"{green}{Shodaninfo}")
 if (file):
     with open(file,'w') as file:
         file.write("Whois information"+'\n'+whoisresult + '\n\n\n')
